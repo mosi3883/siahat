@@ -1,0 +1,13 @@
+.heading-primary {
+  color: #fff;
+  font-size: 5rem;
+
+  &--main {
+    display: block;
+  }
+
+  &--sub {
+    display: block;
+    font-size: 3rem;
+  }
+}

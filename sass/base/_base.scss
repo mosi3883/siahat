@@ -1,3 +1,9 @@
+:root {
+  // Colors
+
+  --color-white: #fff;
+}
+
 // General css reset
 *,
 *::before,
@@ -13,4 +19,7 @@ html {
 
 body {
   box-sizing: border-box;
+
+  padding: 5vh 3rem;
+  padding-bottom: 0; //temp
 }

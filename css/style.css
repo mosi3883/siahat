@@ -1,3 +1,7 @@
+:root {
+  --color-white: #fff;
+}
+
 *,
 *::before,
 *::after {
@@ -12,12 +16,46 @@ html {
 
 body {
   box-sizing: border-box;
+  padding: 5vh 3rem;
+  padding-bottom: 0;
+}
+
+.heading-primary {
+  color: #fff;
+  font-size: 5rem;
+}
+.heading-primary--main {
+  display: block;
+}
+.heading-primary--sub {
+  display: block;
+  font-size: 3rem;
 }
 
 /* Base Colors */
 .header {
-  min-height: 100vh;
-  background-color: #55c57a;
+  height: 95vh;
+  clip-path: polygon(0% 0%, 100% 0, 100% 85vh, 0% 100%);
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
+  background-size: cover;
+  background-position: top;
+  position: relative;
+}
+.header__logo-box {
+  position: absolute;
+  left: 4rem;
+  top: 4rem;
+}
+.header__logo {
+  height: 3.5rem;
+  width: auto;
+}
+.header__hero-text {
+  position: absolute;
+  top: 40%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

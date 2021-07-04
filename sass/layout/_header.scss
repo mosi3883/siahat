@@ -1,5 +1,36 @@
 @use "../abstract" as *;
 .header {
-  min-height: 100vh;
-  background-color: $color-primary;
+  // min-height: 100vh;
+  height: 95vh;
+  clip-path: polygon(0% 0%, 100% 0, 100% 85vh, 0% 100%);
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url("../img/hero.jpg");
+  background-size: cover;
+  background-position: top;
+
+  position: relative;
+
+  &__logo-box {
+    position: absolute;
+    left: 4rem;
+    top: 4rem;
+  }
+
+  &__logo {
+    height: 3.5rem;
+    width: auto;
+  }
+
+  &__hero-text {
+    // @include absCenter;
+    position: absolute;
+    top: 40%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    text-align: center;
+  }
 }
