@@ -1,0 +1,5 @@
+@use "../abstract" as *;
+.header {
+  min-height: 100vh;
+  background-color: $color-primary;
+}

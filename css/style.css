@@ -1,0 +1,23 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+/* Base Colors */
+.header {
+  min-height: 100vh;
+  background-color: #55c57a;
+}
+
+/*# sourceMappingURL=style.css.map */
