@@ -1,13 +1,24 @@
+body {
+  font-family: var(--font-primary);
+  font-size: var(--default-font-size);
+  line-height: 1.6;
+  color: var(--color-grey-dark-1);
+}
+
 .heading-primary {
-  color: #fff;
-  font-size: 5rem;
+  color: var(--color-white);
+  margin-bottom: 6rem;
 
   &--main {
     display: block;
+    font-size: 7.5rem;
+    word-spacing: 0.5rem;
+    font-weight: 300;
   }
 
   &--sub {
     display: block;
-    font-size: 3rem;
+    font-size: 2.2rem;
+    font-weight: 700;
   }
 }
