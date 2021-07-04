@@ -14,11 +14,15 @@ body {
     font-size: 7.5rem;
     word-spacing: 0.5rem;
     font-weight: 300;
+    animation: moveInRight 1s ease-out 0.5s;
+    animation-fill-mode: backwards;
   }
 
   &--sub {
     display: block;
     font-size: 2.2rem;
     font-weight: 700;
+    animation: moveInLeft 1s ease-out 0.5s;
+    animation-fill-mode: backwards;
   }
 }
