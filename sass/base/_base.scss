@@ -1,13 +1,26 @@
+@use "../abstract" as *;
 :root {
   // Colors
 
+  --color-primary: #{$color-primary};
+  --color-primary-light: #{$color-primary-light};
+  --color-primary-dark: #{$color-primary-dark};
+
+  --color-secondary-light: #{$color-secondary-light};
+  --color-secondary-dark: #{$color-secondary-dark};
+
+  --color-tertiary-light: #{$color-tertiary-light};
+  --color-tertiary-dark: #{$color-tertiary-dark};
+
   --color-white: #fff;
+  --color-grey-light-1: #f7f7f7;
   --font-primary: "Vazir", "Tahoma", sans-serif;
   --default-font-size: 1.6rem;
 
   --color-grey-dark-1: #777;
 
   --color-black-a-sm: rgba(0, 0, 0, 0.2);
+  --color-black-a-md: rgba(0, 0, 0, 0.5);
 }
 
 // General css reset
@@ -28,4 +41,10 @@ body {
 
   padding: 5vh 3rem;
   padding-bottom: 0; //temp
+}
+
+.row {
+  max-width: 120rem;
+  padding: 0 2%;
+  margin: 0 auto;
 }
