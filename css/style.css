@@ -220,7 +220,7 @@ body {
   left: 0;
 }
 .composition__photo--p3 {
-  left: 20%;
+  right: 23%;
   top: 10rem;
 }
 .composition__photo:hover {
@@ -231,7 +231,8 @@ body {
   box-shadow: 0 2.5rem 4rem var(--color-black-a-md);
 }
 .composition:hover .composition__photo:not(:hover) {
-  transform: scale(0.9);
+  transform: scale(0.94);
+  filter: grayscale(0.65) blur(1px);
 }
 
 .header {
