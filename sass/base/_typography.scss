@@ -42,10 +42,11 @@ body {
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  transition: transform 0.25s;
+  transition: all 0.25s;
 
   &:hover {
     transform: skewX(-15deg) skewY(-2deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem var(--color-black-a-sm);
   }
 }
 

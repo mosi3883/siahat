@@ -109,10 +109,11 @@ body {
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  transition: transform 0.25s;
+  transition: all 0.25s;
 }
 .heading-secondary:hover {
   transform: skewX(-15deg) skewY(-2deg) scale(1.1);
+  text-shadow: 0.5rem 1rem 2rem var(--color-black-a-sm);
 }
 
 .heading-tertiary {
@@ -235,6 +236,42 @@ body {
   filter: grayscale(0.65) blur(1px);
 }
 
+.features {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feature {
+  flex: 0 1 25%;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 1.5rem 4rem var(--color-black-a-sm);
+  min-height: 30rem;
+  text-align: center;
+  padding: 2rem;
+  transition: all 0.3s;
+}
+.feature:not(:last-child) {
+  margin-left: 3rem;
+}
+.feature:hover {
+  transform: translateY(-1.5rem) scale(1.03);
+}
+.feature__icon {
+  display: inline-block;
+  width: 7rem;
+  height: 7rem;
+  stroke-width: 0;
+  fill: var(--color-primary);
+}
+.feature__heading {
+  margin-top: 0.7rem;
+  font-size: 1.7rem;
+}
+.feature__text {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
 .header {
   height: 95vh;
   clip-path: polygon(0% 0%, 100% 0, 100% 80vh, 0% 100%);
@@ -262,7 +299,7 @@ body {
 
 .section-about {
   background-color: var(--color-grey-light-1);
-  padding: 18rem 0 13rem;
+  padding: 20rem 0 27rem;
   margin-top: -15vh;
 }
 
@@ -276,6 +313,24 @@ body {
 }
 .about__composition {
   flex: 1 1 50%;
+}
+
+.section-features {
+  padding: 20rem 0;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/nat-4.jpg");
+  background-size: cover;
+  background-position: top;
+  transform: skewY(-6deg);
+  margin-top: -11rem;
+}
+.section-features > * {
+  transform: skewY(6deg);
+}
+
+.section-tours {
+  padding: 25rem 0 15rem;
+  background-color: var(--color-grey-light-1);
+  margin-top: -10rem;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,7 +1,8 @@
+@use "../abstract" as *;
 .section-about {
   background-color: var(--color-grey-light-1);
 
-  padding: 18rem 0 13rem;
+  padding: 20rem 0 27rem;
   margin-top: -15vh;
 }
 
@@ -19,4 +20,27 @@
   &__composition {
     flex: 1 1 50%;
   }
+}
+
+.section-features {
+  padding: 20rem 0;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url("../img/nat-4.jpg");
+  background-size: cover;
+  background-position: top;
+  transform: skewY(-6deg);
+  margin-top: -11rem;
+  & > * {
+    transform: skewY(6deg);
+  }
+}
+
+.section-tours {
+  padding: 25rem 0 15rem;
+  background-color: var(--color-grey-light-1);
+  margin-top: -10rem;
 }
