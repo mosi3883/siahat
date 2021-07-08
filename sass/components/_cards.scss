@@ -70,9 +70,10 @@
   }
 
   &__picture {
-    flex: 0 1 40%;
+    flex: 0 1 46%;
     background-size: cover;
     background-blend-mode: screen;
+    clip-path: polygon(0% 0%, 100% 0, 100% 90%, 0% 100%);
 
     &--1 {
       background-image: linear-gradient(
@@ -82,14 +83,101 @@
         ),
         url("../img/nat-5.jpg");
     }
+
+    &--2 {
+      background-image: linear-gradient(
+          to left bottom,
+          var(--color-primary-light),
+          var(--color-primary-dark)
+        ),
+        url("../img/nat-6.jpg");
+    }
+
+    &--3 {
+      background-image: linear-gradient(
+          to left bottom,
+          var(--color-tertiary-light),
+          var(--color-tertiary-dark)
+        ),
+        url("../img/nat-7.jpg");
+    }
   }
 
   &__heading {
     flex: 0 1 auto;
-    font-size: 1.6rem;
+    font-size: 2.8rem;
+    font-weight: 300;
+    position: absolute;
+    top: 10rem;
+    left: 2rem;
+    color: var(--color-white);
+    // width: 50%;
+    text-align: left;
+  }
+
+  &__heading-span {
+    padding: 1rem 1.5rem;
+    // -webkit-box-decoration-break: clone;
+    // box-decoration-break: clone;
+
+    &--1 {
+      background-image: linear-gradient(
+        to left bottom,
+        rgba($color-secondary-light, 0.85),
+        rgba($color-secondary-dark, 0.85)
+      );
+    }
+    &--2 {
+      background-image: linear-gradient(
+        to left bottom,
+        rgba($color-primary-light, 0.85),
+        rgba($color-primary-dark, 0.85)
+      );
+    }
+    &--3 {
+      background-image: linear-gradient(
+        to left bottom,
+        rgba($color-tertiary-light, 0.85),
+        rgba($color-tertiary-dark, 0.85)
+      );
+    }
   }
 
   &__details {
-    flex: 1 0 50%;
+    flex: 1 0 auto;
+    padding: 3rem 0;
+  }
+
+  &__det-list {
+    list-style: none;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  &__det-item {
+    font-size: 1.7rem;
+    padding: 1.2rem 0;
+    text-align: center;
+    &:not(:last-child) {
+      border-bottom: 1px solid #eee;
+    }
+  }
+
+  &__cta {
+    color: var(--color-white);
+    @include absCenter;
+    text-align: center;
+    width: 90%;
+  }
+
+  &__price-box {
+    margin-bottom: 8rem;
+    p {
+      font-size: 20px;
+    }
+    p:last-child {
+      font-size: 4.2rem;
+      font-weight: 100;
+    }
   }
 }
