@@ -42,7 +42,14 @@
     background-color: var(--color-white);
     &::after {
       background-color: var(--color-white);
-      // background-color: red;
+    }
+  }
+
+  &--green {
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    &::after {
+      background-color: var(--color-primary);
     }
   }
 

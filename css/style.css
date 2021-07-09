@@ -126,6 +126,10 @@ body {
   text-align: center;
 }
 
+.mt-xl {
+  margin-top: 8rem;
+}
+
 .mb-xs {
   margin-bottom: 1rem;
 }
@@ -180,6 +184,13 @@ body {
 }
 .btn--white::after {
   background-color: var(--color-white);
+}
+.btn--green {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+}
+.btn--green::after {
+  background-color: var(--color-primary);
 }
 .btn--animated {
   animation: moveInBottom 1s ease-out 1.5s;
