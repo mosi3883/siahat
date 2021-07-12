@@ -461,6 +461,15 @@ body {
   transform: translate(50%, -50%);
 }
 
+.signup__inner {
+  min-height: 52rem;
+  background-image: linear-gradient(255deg, rgba(255, 255, 255, 0.85) 50%, transparent 50%), url(../img/nat-10.jpg);
+  background-size: cover;
+  border-radius: 3px;
+}
+.signup__form-box {
+  width: 50%;
+}
 .header {
   height: 95vh;
   clip-path: polygon(0% 0%, 100% 0, 100% 80vh, 0% 100%);
@@ -532,7 +541,8 @@ body {
 }
 
 .section-signup {
-  padding: 20rem 0;
+  padding: 15rem 0;
+  background-image: linear-gradient(to left, var(--color-primary-light), var(--color-primary-dark));
 }
 
 /*# sourceMappingURL=style.css.map */

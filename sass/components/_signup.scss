@@ -1,0 +1,21 @@
+@use "../abstract" as *;
+.signup {
+  &__inner {
+    min-height: 52rem; // temp
+    background-image: linear-gradient(
+        255deg,
+        rgba($color-white, 0.85) 50%,
+        transparent 50%
+      ),
+      url(../img/nat-10.jpg);
+    background-size: cover;
+    border-radius: 3px;
+  }
+
+  &__form-box {
+    width: 50%;
+  }
+
+  &__form {
+  }
+}
