@@ -45,7 +45,7 @@
   --font-primary: "Vazir", "Tahoma", sans-serif;
   --default-font-size: 1.6rem;
   --color-grey-dark-1: #777;
-  --color-black-a-xs: rgba(0, 0, 0, 0.14)
+  --color-black-a-xs: rgba(0, 0, 0, 0.14);
   --color-black-a-sm: rgba(0, 0, 0, 0.2);
   --color-black-a-md: rgba(0, 0, 0, 0.5);
 }
@@ -407,6 +407,60 @@ body {
   font-weight: 100;
 }
 
+.comment {
+  width: 75%;
+  min-height: 27rem;
+  margin: 0 auto;
+  box-shadow: 0 2rem 4rem var(--color-black-a-xs);
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 3px;
+  padding: 6rem 9rem 6rem 6rem;
+  transform: skewX(-12deg);
+}
+.comment:not(:last-child) {
+  margin-bottom: 8rem;
+}
+.comment__picture-box {
+  width: 15rem;
+  height: 15rem;
+  float: right;
+  clip-path: circle(50% at 50% 50%);
+  position: relative;
+  transform: translateX(3rem) skewX(12deg);
+  overflow: hidden;
+  shape-outside: circle(50% at 50% 50%);
+}
+.comment__picture {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transform: scale(1.4);
+  transition: all 0.5s;
+}
+.comment__figcaption {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  color: var(--color-white);
+  font-size: 1.7rem;
+  text-align: center;
+  opacity: 0;
+  transform: translate(50%, 50%);
+  transition: all 0.5s;
+}
+.comment__text {
+  transform: skewX(12deg);
+}
+.comment:hover .comment__picture {
+  transform: scale(1.1);
+  filter: blur(3px) brightness(80%);
+}
+.comment:hover .comment__figcaption {
+  opacity: 1;
+  transform: translate(50%, -50%);
+}
+
 .header {
   height: 95vh;
   clip-path: polygon(0% 0%, 100% 0, 100% 80vh, 0% 100%);
@@ -474,6 +528,11 @@ body {
   background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../img/comments-bg.jpg");
   background-size: cover;
   background-attachment: fixed;
+  background-position: 0% 20%;
+}
+
+.section-signup {
+  padding: 20rem 0;
 }
 
 /*# sourceMappingURL=style.css.map */
