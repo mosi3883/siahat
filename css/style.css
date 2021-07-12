@@ -123,27 +123,35 @@ body {
 }
 
 .center-text {
-  text-align: center;
+  text-align: center !important;
 }
 
 .mt-xl {
-  margin-top: 8rem;
+  margin-top: 8rem !important;
 }
 
 .mb-xs {
-  margin-bottom: 1rem;
+  margin-bottom: 1rem !important;
 }
 
 .mb-sm {
-  margin-bottom: 3rem;
+  margin-bottom: 3rem !important;
 }
 
 .mb-md {
-  margin-bottom: 4rem;
+  margin-bottom: 4rem !important;
 }
 
 .mb-lg {
-  margin-bottom: 8rem;
+  margin-bottom: 8rem !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.d-none {
+  display: none !important;
 }
 
 .btn:link, .btn:visited {
@@ -469,7 +477,85 @@ body {
 }
 .signup__form-box {
   width: 50%;
+  padding: 6rem;
 }
+
+.form__group:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.form__input {
+  display: block;
+  width: 90%;
+  padding: 1.5rem 2rem;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-bottom: 3px solid transparent;
+  font-size: 1.6rem;
+  font-family: inherit;
+  transition: all 0.3s;
+}
+.form__input:focus {
+  outline: none;
+  border-bottom: 3px solid var(--color-secondary-dark);
+  background-color: var(--color-white);
+}
+.form__input:focus:valid {
+  border-bottom: 3px solid var(--color-primary);
+}
+.form__input::placeholder {
+  color: #999;
+}
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem);
+}
+.form__label {
+  display: block;
+  font-size: 1.4rem;
+  margin-right: 2rem;
+  transition: all 1s;
+  transform: translateY(0);
+  margin-top: 0.7rem;
+  visibility: visible;
+}
+.form__radio-group {
+  flex-basis: 50%;
+}
+.form__radio-label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.form__radio-button {
+  display: inline-block;
+  margin-left: 0.7rem;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  border: 5px solid var(--color-primary);
+  position: relative;
+}
+.form__radio-button::after {
+  content: "";
+  height: 1.3rem;
+  width: 1.3rem;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  transition: all 0.3s;
+  opacity: 0;
+  visibility: hidden;
+}
+.form__radio-input:checked + .form__radio-label .form__radio-button::after {
+  opacity: 1;
+  visibility: visible;
+}
+
 .header {
   height: 95vh;
   clip-path: polygon(0% 0%, 100% 0, 100% 80vh, 0% 100%);

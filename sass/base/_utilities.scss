@@ -1,23 +1,31 @@
 .center-text {
-  text-align: center;
+  text-align: center !important;
 }
 
 .mt-xl {
-  margin-top: 8rem;
+  margin-top: 8rem !important;
 }
 
 .mb-xs {
-  margin-bottom: 1rem;
+  margin-bottom: 1rem !important;
 }
 
 .mb-sm {
-  margin-bottom: 3rem;
+  margin-bottom: 3rem !important;
 }
 
 .mb-md {
-  margin-bottom: 4rem;
+  margin-bottom: 4rem !important;
 }
 
 .mb-lg {
-  margin-bottom: 8rem;
+  margin-bottom: 8rem !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.d-none {
+  display: none !important;
 }
