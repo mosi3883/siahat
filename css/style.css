@@ -34,7 +34,6 @@
 /* Base Colors */
 @font-face {
   font-family: Vazir;
-  src: url("Vazir-Regular.eot");
   src: url("vazir/Vazir-Regular.woff2") format("woff2");
   font-weight: normal;
   font-display: swap;
@@ -168,7 +167,7 @@ body {
 }
 
 .mb-xs {
-  margin-bottom: 1rem !important;
+  margin-bottom: 1.5rem !important;
 }
 
 .mb-sm {
