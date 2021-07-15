@@ -1,0 +1,139 @@
+@use "../abstract" as *;
+.navigation {
+  &__checkbox {
+    display: none;
+  }
+  &__button {
+    position: fixed;
+    top: 7rem;
+    right: 7rem;
+    width: 6rem;
+    height: 6rem;
+    background-color: var(--color-white);
+    border-radius: 50%;
+    z-index: 2000;
+    box-shadow: 0 1rem 3rem var(--color-black-a-sm);
+  }
+
+  &__icon {
+    width: 3rem;
+    text-align: center;
+    height: 2px;
+    @include absCenter;
+    background-color: var(--color-black-2);
+    position: relative;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 3rem;
+      background-color: var(--color-black-2);
+      right: 0;
+      transition: all 0.5s;
+    }
+
+    &::before {
+      top: -1rem;
+    }
+
+    &::after {
+      top: 1rem;
+    }
+  }
+
+  &__background {
+    position: fixed;
+    top: 7.5rem;
+    right: 7.5rem;
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--color-white);
+    border-radius: 50%;
+    z-index: 1000;
+    background-image: radial-gradient(
+      var(--color-primary-light),
+      var(--color-primary-dark)
+    );
+
+    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+  }
+
+  &__nav {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    // background-color: orangered;
+    z-index: 1500;
+    transform: translateX(-100%);
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  &__list {
+    list-style: none;
+    @include absCenter;
+
+    width: 100%;
+    text-align: center;
+  }
+
+  &__item {
+    margin: 1rem;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      color: var(--color-white);
+      font-size: 3rem;
+      display: inline-block;
+      text-decoration: none;
+      padding: 1rem 2rem;
+      display: inline-flex;
+      align-items: center;
+      background-image: linear-gradient(
+        30deg,
+        var(--color-white) 50%,
+        transparent 50%
+      );
+      background-size: 305%;
+      background-position: 100%;
+      transition: all 1s;
+      overflow: hidden;
+    }
+
+    &:hover,
+    &:active {
+      transform: translateX(-1rem);
+      background-position: 0%;
+      color: var(--color-primary);
+    }
+  }
+
+  // functional
+
+  &__checkbox:checked + &__button &__icon {
+    background-color: transparent;
+    &::before {
+      transform: rotate(135deg);
+      top: 0;
+    }
+
+    &::after {
+      transform: rotate(-135deg);
+      top: 0;
+    }
+  }
+
+  &__checkbox:checked ~ &__background {
+    transform: scale(80);
+  }
+
+  &__checkbox:checked ~ &__nav {
+    transform: translateX(0);
+  }
+}
