@@ -32,6 +32,20 @@
   }
 }
 /* Base Colors */
+/*
+0 - 600px: phone
+600px  -  900px: table port
+900px  - 1200px: tablet land
+1200px - 1800px: normal computers
+1800px - &     : big-desktops
+*/
+/* break points */
+/*
+ - phone < 600px => 37.5em
+ - tab-port < 900 => 56.25em
+ - tab-land < 1200 => 75em
+ - big-desktop > 1800 => 112.5em
+ */
 @font-face {
   font-family: Vazir;
   src: url("vazir/Vazir-Regular.woff2") format("woff2");
@@ -98,15 +112,35 @@
 html {
   font-size: 62.5%;
 }
+@media screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media screen and (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
 
 body {
   box-sizing: border-box;
   padding: 5vh 3rem;
-  padding-bottom: 0;
+}
+@media screen and (max-width: 56.25em) {
+  body {
+    padding: 0;
+  }
 }
 
 .row {
   max-width: 120rem;
+  width: 96%;
   padding: 0 2%;
   margin: 0 auto;
 }
@@ -124,11 +158,23 @@ body {
 }
 .heading-primary--main {
   display: block;
-  font-size: 7.5rem;
+  font-size: 7.3rem;
   word-spacing: 0.5rem;
   font-weight: 300;
   animation: moveInRight 1s ease-out 0.5s;
   animation-fill-mode: backwards;
+}
+@media screen and (max-width: 56.25em) {
+  .heading-primary--main {
+    word-spacing: 0px;
+    font-size: 6rem;
+  }
+}
+@media screen and (max-width: 37.5em) {
+  .heading-primary--main {
+    word-spacing: 0px;
+    font-size: 5rem;
+  }
 }
 .heading-primary--sub {
   display: block;
@@ -136,6 +182,11 @@ body {
   font-weight: 700;
   animation: moveInLeft 1s ease-out 0.5s;
   animation-fill-mode: backwards;
+}
+@media screen and (max-width: 37.5em) {
+  .heading-primary--sub {
+    font-size: 1.6rem;
+  }
 }
 
 .heading-secondary {
@@ -148,6 +199,16 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   transition: all 0.25s;
+}
+@media screen and (max-width: 56.25em) {
+  .heading-secondary {
+    font-size: 3.4rem;
+  }
+}
+@media screen and (max-width: 37.5em) {
+  .heading-secondary {
+    font-size: 2.5rem;
+  }
 }
 .heading-secondary:hover {
   transform: skewX(-15deg) skewY(-2deg) scale(1.1);
@@ -270,13 +331,28 @@ body {
   transition: all 0.3s;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
 }
+@media screen and (max-width: 56.25em) {
+  .composition__photo {
+    width: 40%;
+  }
+}
 .composition__photo--p1 {
   top: -1rem;
   right: 0;
 }
+@media screen and (max-width: 56.25em) {
+  .composition__photo--p1 {
+    top: 0;
+  }
+}
 .composition__photo--p2 {
   top: 1rem;
   left: 0;
+}
+@media screen and (max-width: 56.25em) {
+  .composition__photo--p2 {
+    top: 0;
+  }
 }
 .composition__photo--p3 {
   right: 23%;
@@ -296,20 +372,35 @@ body {
 
 .features {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+}
+@media screen and (max-width: 37.5em) {
+  .features {
+    justify-content: center;
+  }
 }
 
 .feature {
-  flex: 0 1 25%;
+  flex: 0 1 23%;
   background-color: rgba(255, 255, 255, 0.8);
   box-shadow: 0 1.5rem 4rem var(--color-black-a-sm);
   min-height: 30rem;
   text-align: center;
   padding: 2rem;
-  transition: all 0.3s;
+  transition: transform 0.3s;
+  margin: 2% 1%;
 }
-.feature:not(:last-child) {
-  margin-left: 3rem;
+@media screen and (max-width: 56.25em) {
+  .feature {
+    flex: 0 1 48%;
+  }
+}
+@media screen and (max-width: 37.5em) {
+  .feature {
+    flex: 0 1 98%;
+    max-width: 45rem;
+  }
 }
 .feature:hover {
   transform: translateY(-1.5rem) scale(1.03);
@@ -334,15 +425,21 @@ body {
   display: flex;
   justify-content: space-between;
 }
+@media screen and (max-width: 56.25em) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 .card {
   min-height: 50rem;
-  flex: 1 0 auto;
+  width: 100%;
+  flex: 0 1 32%;
   position: relative;
   perspective: 150rem;
-}
-.card:not(:last-child) {
-  margin-left: 4rem;
+  margin: 3% 1%;
+  max-width: 50rem;
 }
 .card__side {
   border-radius: 0.5rem;
@@ -613,6 +710,7 @@ body {
   width: auto;
 }
 .header__hero-text {
+  width: 100%;
   position: absolute;
   top: 40%;
   right: 50%;
@@ -787,12 +885,28 @@ body {
   display: flex;
   justify-content: space-between;
 }
+@media screen and (max-width: 56.25em) {
+  .about__inner {
+    flex-direction: column-reverse;
+  }
+}
 .about__text {
-  flex: 0 1 47%;
-  margin-left: 5rem;
+  flex: 0 1 50%;
+}
+@media screen and (max-width: 56.25em) {
+  .about__text {
+    flex: 0 0 auto;
+  }
 }
 .about__composition {
   flex: 1 1 50%;
+  margin-right: 5rem;
+}
+@media screen and (max-width: 56.25em) {
+  .about__composition {
+    flex-basis: 40vw;
+    margin-right: 0;
+  }
 }
 
 .section-features {

@@ -2,18 +2,20 @@
 .cards {
   display: flex;
   justify-content: space-between;
+  @include respond(tab-port) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .card {
   min-height: 50rem; //temp
-
-  flex: 1 0 auto;
+  width: 100%;
+  flex: 0 1 32%;
   position: relative;
   perspective: 150rem;
-
-  &:not(:last-child) {
-    margin-left: 4rem;
-  }
+  margin: 3% 1%;
+  max-width: 50rem;
 
   &__side {
     border-radius: 0.5rem;

@@ -10,15 +10,26 @@
   &__inner {
     display: flex;
     justify-content: space-between;
+
+    @include respond(tab-port) {
+      flex-direction: column-reverse;
+    }
   }
 
   &__text {
-    flex: 0 1 47%;
-    margin-left: 5rem;
+    flex: 0 1 50%;
+    @include respond(tab-port) {
+      flex: 0 0 auto;
+    }
   }
 
   &__composition {
     flex: 1 1 50%;
+    margin-right: 5rem;
+    @include respond(tab-port) {
+      flex-basis: 40vw;
+      margin-right: 0;
+    }
   }
 }
 

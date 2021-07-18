@@ -79,17 +79,40 @@
 html {
   // font-size: (0.75vw); // 1rem = 10px
   font-size: 62.5%;
+
+  // @include respond-phone {
+  //   font-size: 50%;
+  // }
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+
+  // @include respond(phone) {
+  //   font-size: 50%;
+  // }
+
+  @include respond(big-desktop) {
+    font-size: 75%;
+  }
 }
 
 body {
   box-sizing: border-box;
 
   padding: 5vh 3rem;
-  padding-bottom: 0; //temp
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
 }
 
 .row {
   max-width: 120rem;
+  width: 96%;
   padding: 0 2%;
   margin: 0 auto;
 }

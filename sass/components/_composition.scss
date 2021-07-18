@@ -1,3 +1,4 @@
+@use '../abstract' as *;
 .composition {
   position: relative;
 
@@ -8,14 +9,25 @@
     transition: all 0.3s;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
 
+    @include respond(tab-port) {
+      width: 40%;
+    }
+
     &--p1 {
       top: -1rem;
       right: 0;
+
+      @include respond(tab-port) {
+        top: 0;
+      }
     }
 
     &--p2 {
       top: 1rem;
       left: 0;
+      @include respond(tab-port) {
+        top: 0;
+      }
     }
 
     &--p3 {
