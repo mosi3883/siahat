@@ -8,7 +8,7 @@
     "compile:sass": "sass sass/main.scss css/style.css --style compressed",
     "live-mode": "live-server",
     "dev": "npm-run-all -p watch:sass live-mode",
-    "build": "run-s compile:sass"
+    "pro": "run-s compile:sass"
   },
   "keywords": [
     "nature"
