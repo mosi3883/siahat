@@ -1,4 +1,4 @@
-@use "../abstract" as *;
+@use '../abstract' as *;
 .header {
   // min-height: 100vh;
   height: 95vh;
@@ -8,11 +8,20 @@
       rgba($color-primary-light, 0.8),
       rgba($color-primary-dark, 0.8)
     ),
-    url("../img/hero-2000w.jpg");
+    url('../img/hero-2000w.jpg');
   background-size: cover;
   background-position: top;
 
   position: relative;
+
+  @include respond(tab-land) {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)
+      ),
+      url('../img/hero-1200w.jpg');
+  }
 
   &__logo-box {
     position: absolute;
@@ -26,7 +35,6 @@
   }
 
   &__hero-text {
-    // @include absCenter;
     width: 100%;
     position: absolute;
     top: 40%;

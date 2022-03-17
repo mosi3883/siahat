@@ -1,43 +1,43 @@
-@use "../abstract" as *;
+@use '../abstract' as *;
 
 @font-face {
   font-family: Vazir;
-  src: url("vazir/Vazir-Regular.woff2") format("woff2");
+  src: url('vazir/Vazir-Regular.woff2') format('woff2');
   font-weight: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: Vazir;
-  src: url("vazir/Vazir-Bold.woff2") format("woff2");
+  src: url('vazir/Vazir-Bold.woff2') format('woff2');
   font-weight: bold;
   font-display: swap;
 }
 
 @font-face {
   font-family: Vazir;
-  src: url("vazir/Vazir-Thin.woff2") format("woff2");
+  src: url('vazir/Vazir-Thin.woff2') format('woff2');
   font-weight: 100;
   font-display: swap;
 }
 
 @font-face {
   font-family: Vazir;
-  src: url("vazir/Vazir-Light.woff2") format("woff2");
+  src: url('vazir/Vazir-Light.woff2') format('woff2');
   font-weight: 300;
   font-display: swap;
 }
 
 @font-face {
   font-family: Vazir;
-  src: url("vazir/Vazir-Medium.woff2") format("woff2");
+  src: url('vazir/Vazir-Medium.woff2') format('woff2');
   font-weight: 500;
   font-display: swap;
 }
 
 @font-face {
   font-family: Vazir;
-  src: url("vazir/Vazir-Black.woff2") format("woff2");
+  src: url('vazir/Vazir-Black.woff2') format('woff2');
   font-weight: 900;
   font-display: swap;
 }
@@ -58,7 +58,7 @@
   --color-white: #fff;
   --color-black-2: #333;
   --color-grey-light-1: #f7f7f7;
-  --font-primary: "Vazir", "Tahoma", sans-serif;
+  --font-primary: 'Vazir', 'Tahoma', sans-serif;
   --default-font-size: 1.6rem;
 
   --color-grey-dark-1: #777;
@@ -108,6 +108,7 @@ body {
   @include respond(tab-port) {
     padding: 0;
   }
+  overflow-x: hidden;
 }
 
 .row {

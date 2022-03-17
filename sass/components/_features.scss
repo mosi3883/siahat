@@ -1,4 +1,4 @@
-@use "../abstract" as *;
+@use '../abstract' as *;
 .features {
   display: flex;
   flex-wrap: wrap;
@@ -32,6 +32,13 @@
 
   &:hover {
     transform: translateY(-1.5rem) scale(1.03);
+    @include respond(tab-port) {
+      transform: translateY(-1rem) scale(1.03);
+    }
+
+    @include respond(phone) {
+      transform: translateY(-0.7rem) scale(1.03);
+    }
   }
 
   &__icon {

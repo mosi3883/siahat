@@ -18,7 +18,8 @@
       right: 0;
 
       @include respond(tab-port) {
-        top: 0;
+        top: 1.5rem;
+        right: 5%;
       }
     }
 
@@ -26,13 +27,17 @@
       top: 1rem;
       left: 0;
       @include respond(tab-port) {
-        top: 0;
+        top: 1.5rem;
+        left: 5%;
       }
     }
 
     &--p3 {
       right: 23%;
       top: 10rem;
+      @include respond(tab-port) {
+        right: 28%;
+      }
     }
 
     &:hover {
@@ -41,6 +46,10 @@
       z-index: 10;
       transform: scale(1.07) translateY(-1rem);
       box-shadow: 0 2.5rem 4rem var(--color-black-a-md);
+      @include respond(phone) {
+        outline-offset: 5px;
+        transform: none;
+      }
     }
   }
 

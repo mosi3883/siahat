@@ -1,4 +1,4 @@
-@use "../abstract" as *;
+@use '../abstract' as *;
 .comments {
 }
 
@@ -14,6 +14,15 @@
 
   transform: skewX(-12deg);
 
+  @include respond(tab-port) {
+    transform: none;
+    width: 80%;
+  }
+
+  @include respond(phone) {
+    width: 87%;
+  }
+
   &:not(:last-child) {
     margin-bottom: 8rem;
   }
@@ -28,6 +37,22 @@
 
     overflow: hidden;
     shape-outside: circle(50% at 50% 50%);
+
+    @include respond(tab-port) {
+      width: auto;
+      height: auto;
+      border-radius: 2rem;
+      float: none;
+      transform: none;
+      shape-outside: none;
+      margin-bottom: 3rem;
+      clip-path: none;
+      text-align: center;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__picture {
@@ -36,6 +61,10 @@
     object-fit: cover;
     transform: scale(1.4);
     transition: all 0.5s;
+    @include respond(tab-port) {
+      transform: none;
+      height: 25rem;
+    }
   }
 
   &__figcaption {
@@ -46,19 +75,37 @@
     opacity: 0;
     transform: translate(50%, 50%);
     transition: all 0.5s;
+    @include respond(tab-port) {
+      position: static;
+      color: #222;
+      opacity: 1;
+      transform: none;
+      font-size: 3rem;
+    }
   }
 
   &__text {
     transform: skewX(12deg);
+    @include respond(tab-port) {
+      transform: none;
+    }
   }
 
   &:hover &__picture {
     transform: scale(1.1);
     filter: blur(3px) brightness(80%);
+    @include respond(tab-port) {
+      filter: none;
+      transform: none;
+    }
   }
 
   &:hover &__figcaption {
     opacity: 1;
     transform: translate(50%, -50%);
+    @include respond(tab-port) {
+      opacity: 1;
+      transform: none;
+    }
   }
 }

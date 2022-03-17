@@ -1,3 +1,4 @@
+@use '../abstract' as *;
 .footer {
   padding: 10rem 0;
   background-color: var(--color-black-2);
@@ -12,6 +13,11 @@
   &__inner {
     display: flex;
     justify-content: space-between;
+    @include respond(tab-port) {
+      flex-direction: column;
+      gap: 5rem;
+      align-items: center;
+    }
   }
 
   &__nav {
@@ -58,4 +64,8 @@
   float: left;
   padding-top: 2rem;
   border-top: 1px solid var(--color-grey-dark-1);
+  @include respond(tab-port) {
+    margin-right: 10%;
+    float: none;
+  }
 }
